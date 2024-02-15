@@ -7,31 +7,44 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header id="navigation-bar">
-        <h3 id="logo">Put Logo</h3>
-        <nav id="navigation">
-            <a href="">Lihat Hasil</a>
-            <a href="">Lihat Rumus</a>
-        </nav>
+    <header>
+        <img src="assets/logo.png" id="logo">
+        <h2 id="judul">Kalkulator Suhu</h2>
+        <img src="assets/logo.png" id="logo">
     </header>
     
-    <div class="input-section">
-        <label>Masukkan suhu derajat Celsius (C) ke kotak dibawah, lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (F).</label>
-        <label for="input-field">Celsius (C):</label>
-        <input type="number" class="input-field">
-    </div>
-    <button class="my-button">Konversi</button>
-    <button>Reset</button>
-    <button>Reverse</button>    
+    <main>            
+        <div class="clue">
+            <b id="hint">Petunjuk:</b>
+            <p id="hint">Masukkan suhu derajat Celsius (°C) ke kotak dibawah, lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (°F).</p>
+        </div>
+    <!-- INPUT SECTION -->
+        <div class="input-section">
+            <label for="input-field">Celsius (°C):</label>
+            <input type="number" id="input-field" placeholder="Masukkan suhu dengan angka!" required>
+        </div> 
 
-    </div>
+        <div id="tombol">
+            <button class="my-button" onclick="kalkulator()" >Konversi</button>
+            <button class="my-button" onclick="reset()">Reset</button>
+            <button class="my-button" onclick="reverse()">Reverse</button>
+            <div class="notif">Angka yang anda masukkan akan dirubah dari suhu derajat Fahrenheit ke Celcius!</div>
+            <div id="rumus" class="highlight"></div>
+        </div>
+        
 
-        Fahrenheit (F)
-        <input>
-    </div>
-    <div>
-        Cara Kalkulasi:
-        <box></box>
-    </div>
+    <!-- OUTPUT SECTION -->
+        <div class="output-section">
+            <!-- Fahrenheit -->
+            <label for="input-field">Fahrenheit (°F):</label>
+            <div id="hasil"></div>
+
+            <!-- Cara Kalkulasi -->
+            <label for="input-field">Cara Kalkulasi:</label>
+            <div id="cara"></div>
+        </div>
+
+    </main>
+    <script src="js/script.js"></script>
 </body>
 </html>

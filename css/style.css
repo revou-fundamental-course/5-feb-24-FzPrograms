@@ -1,26 +1,66 @@
+*,
+html{
+    margin: 0;
+    background-color: #edf2fb;
+    padding: 0;
+}
+
+
+input.error::placeholder {
+    color: red;
+    font-weight: bold;
+}
+
 /* Header */
 
-#navigation-bar {
+header {
     display: flex;
     justify-content: space-between;
+    background-color:#99B0D6 ;
+    justify-items: center;
+    width: 100%;
 }
 
 #logo {
-    height: min-content;
-    margin-top: 0;
+    height: 70px;
+    width: 70px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color:#99B0D6 ;
 }
 
-#navigation{
-    display: flex;
+#judul {
+    color: #E4EDFF;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #99B0D6;
+    align-self: center;
+    background-color: #294D7F;
+    border-radius: 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
-#navigation>a {
-    text-decoration: none;
-    padding: 8px;
+
+.shadow-effect {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
 }
 
-#navigation:hover {
-    color: red;
+/*main*/
+main {
+    margin: 8px;
+    padding: 0;
+
+}
+
+.clue {
+    margin-top: 15px;
+    font-size: 15px;
+
+}
+
+#hint {
+    margin: 0;
 }
 
 /* Input Section */
@@ -28,29 +68,91 @@
 .input-section {
     display: flex;
     flex-direction: column;
+    margin-top: 15px;
+    margin-right: 10px;
 }
 
-.input-field {
+#input-field {
     outline: none;
     border-radius: 5px;
-    border: solid black;
-    padding: 8px 8px;
+    border: solid #294D7F;
+    width: 100%;
+    height: 50px;
+    padding-left: 5px;
+    background-color: #edf2fb;
+    margin-top: 5px;
 }
 
-.input-field:focus {
-    border: solid blue;
+#input-field:focus {
+    border: solid #99B0D6;
+}
+
+#tombol {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
 }
 
 .my-button{
-    background-color: yellowgreen;
-    color: white;
+    background-color: #294D7F;
+    color: #E4EDFF;
     border: none;
     border-radius: 5px;
     padding: 8px 16px;
     cursor: pointer;
+    margin-top: 5px;
 }
 
 .my-button:hover {
-    color:aquamarine;
+    color:#99B0D6;
+}
+
+.my-button:active {
+    transform: translateY(2px);
+}
+
+.my-button:hover + .notif {
+    display: block;
+}
+
+.notif {
+    display: none;
+    margin-top: 5px;
+    color: red;
+    font-size: small;
+    align-self: center;
+    border-radius: 5px;
+}
+
+/* Output Section */
+
+.output-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-right: 10px;
+
+}
+
+#hasil {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: solid #294D7F;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+#cara {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    border: solid #294D7F;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding-left: 5px;
 }
 
